@@ -1,0 +1,25 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.8.0/service",
+  "service": {
+    "openapi": true
+  },
+  "watch": true,
+  "plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false
+      },
+      "./routes"
+    ],
+    "typescript": "{PLT_FOO_TYPESCRIPT}"
+  },
+  "clients": [
+    {
+      "schema": "client/client.openapi.json",
+      "name": "client",
+      "type": "openapi",
+      "serviceId": "bar"
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.8.0/composer",
+  "composer": {
+    "services": [
+      {
+        "id": "foo",
+        "openapi": {
+          "url": "/documentation/json",
+          "prefix": "/foo"
+        }
+      },
+      {
+        "id": "bar",
+        "openapi": {
+          "url": "/documentation/json",
+          "prefix": "/bar"
+        }
+      }
+    ],
+    "refreshTimeout": 1000
+  },
+  "watch": true,
+  "plugins": {
+    "paths": [
+      {
+        "path": "./plugins",
+        "encapsulate": false
+      },
+      "./routes"
+    ],
+    "typescript": "{PLT_COMPOSER_TYPESCRIPT}"
+  }
+}

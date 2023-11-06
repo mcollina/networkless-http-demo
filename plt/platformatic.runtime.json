@@ -1,0 +1,19 @@
+{
+  "$schema": "https://platformatic.dev/schemas/v1.8.0/runtime",
+  "entrypoint": "composer",
+  "allowCycles": false,
+  "hotReload": true,
+  "autoload": {
+    "path": "services",
+    "exclude": [
+      "docs"
+    ]
+  },
+  "server": {
+    "hostname": "{PLT_SERVER_HOSTNAME}",
+    "port": "{PORT}",
+    "logger": {
+      "level": "{PLT_SERVER_LOGGER_LEVEL}"
+    }
+  }
+}
